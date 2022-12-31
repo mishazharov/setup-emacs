@@ -35,7 +35,7 @@ if ! type -p nix &>/dev/null ; then
     else
         # "fix" the following error when running nix*
         # error: the group 'nixbld' specified in 'build-users-group' does not exist
-        mkdir -m 0755 /etc/nix
+        sudo mkdir -m 0755 /etc/nix
         echo "build-users-group =" > /etc/nix/nix.conf
     fi
 
